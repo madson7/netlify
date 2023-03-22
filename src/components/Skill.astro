@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  text: string;
+  logo: string;
+  items: string[];
+}
+
+const { text, logo, items } = Astro.props;
+---
+
+<li class="flex gap-4">
+  <span
+    class="w-11 h-11 flex items-center justify-center border-t border-zinc-700 bg-zinc-800 rounded-full">
+    <Icon name={logo} class="w-8" />
+  </span>
+  <span class="text-zinc-100">{text}
+  <span class="text-zinc-400" style="font-size: 80%">
+    {items && items.length > 0 && (
+        <ul class="ml-8">
+          {items.map((item) => (
+            <li key={item}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </span>
+  </span>
+</li>

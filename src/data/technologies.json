@@ -1,0 +1,42 @@
+[
+  {
+    "logo": "os",
+    "text": "Sistemas Operacionais",
+    "items": ["Debian", "Ubuntu", "Centos", "Fedora"]
+  },
+  {
+    "logo": "monitor",
+    "text": "Monitoramento",
+    "items": ["Prometheus", "Grafana", "Zabbix"]
+  },
+  {
+    "logo": "virtual-device",
+    "text": "Virtualização e Contanização",
+    "items": ["OpenStack", "Proxmox", "KVM", "MaaS", "JuJu", "LXC" , "Docker", "Podman", "Kubernetes"]
+  },
+  {
+    "logo": "middleware",
+    "text": "Versionamento de Código e CI/CD",
+    "items": ["GitLab", "GitHub", "Portainer"]
+  },
+  {
+    "logo": "architecture",
+    "text": "Orquestração e Autorização",
+    "items": ["Terraform", "Ansible", "Shell Script", "Portainer", "RKE", "Helm"]
+  },
+  {
+    "logo": "storage",
+    "text": "Storage",
+    "items": ["Dell", "NFS", "GlusterFS"]
+  },
+  {
+    "logo": "database",
+    "text": "Data Base",
+    "items": ["Postgres", "MariaDB", "MySQL"]
+  },
+  {
+    "logo": "ticket",
+    "text": "Sistema de Tíquetes de Suporte",
+    "items": ["MovieDesk", "GLPI", "Email", "Slack"]
+  }
+]

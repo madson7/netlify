@@ -1,0 +1,55 @@
+---
+import Badge from "@components/Badge.astro";
+import { Picture } from "@astrojs/image/components";
+
+interface Props {
+  title: string;
+  img: string;
+  author: string;
+  year: number;
+  comment: string;
+  reading?: boolean;
+  loading?: "lazy" | "eager";
+}
+const {
+  title,
+  img,
+  author,
+  year,
+  comment,
+  reading = false,
+  loading = "lazy",
+} = Astro.props;
+---
+
+<li class="list-none w-full">
+  <article class="sm:flex sm:gap-10">
+    <div class="overflow-hidden rounded-lg sm:w-48">
+      <Picture
+        src={img}
+        alt={title}
+        widths={[400, 600, 800, 1200]}
+        aspectRatio={5 / 7}
+        sizes="(max-width: 640px) 90vw, 192px"
+        loading={loading}
+        width={143}
+        height={200}
+        class="w-full sm:w-48"
+      />
+    </div>
+    <div class="w-full pt-6 sm:py-0">
+      <h2 class="mb-1 space-x-2 text-xl font-semibold text-white">
+        {title}
+      </h2>
+      <div class="mb-2 flex flex-col gap-2 sm:flex-row sm:items-baseline">
+        <p class="space-x-0.5 text-sm text-zinc-400">
+          <span class="text-zinc-300">{author}</span>{" "}
+          <span>&middot;</span>
+          <span class="pr-0 sm:pr-2">{year}</span>
+        </p>
+        {reading && <Badge text="reading" color="indigo" />}
+      </div>
+      <p class="py-1 text-zinc-400 leading-relaxed">{`"${comment}"`}</p>
+    </div>
+  </article>
+</li>
