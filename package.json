@@ -22,7 +22,7 @@
     "astro-icon": "^0.8.0",
     "prettier-plugin-astro": "^0.8.0",
     "remark-code-title": "^0.2.2",
-    "satori": "^0.3.0",
+    "satori": "^0.10.0",
     "satori-html": "^0.3.2",
     "tsm": "^2.3.0"
   },
